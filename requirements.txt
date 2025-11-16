@@ -4,7 +4,11 @@ streamlit
 seaborn
 pandas
 matplotlib
-scikit_learn
-tensorflow
-keras
-opencv_python_headless
+scikit-learn
+tensorflow==2.13.0
+keras==2.13.1
+opencv-python-headless
+gdown
+Pillow
+
+
