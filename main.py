@@ -45,7 +45,7 @@ def model_prediction(test_image):
 # -----------------------------
 # UI
 # -----------------------------
-st.sidebar.title("AgriSens")
+st.sidebar.title("SmartGrow AI")
 app_mode = st.sidebar.selectbox("Select Page", ["HOME", "DISEASE RECOGNITION"])
 
 # Display banner
@@ -96,3 +96,4 @@ elif app_mode == "DISEASE RECOGNITION":
         ]
 
         st.success(f"Model predicts: **{class_name[result_index]}** 🌿")
+
