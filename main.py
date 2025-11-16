@@ -1,3 +1,14 @@
+import gdown
+import os
+import tensorflow as tf
+import numpy as np
+from tensorflow import keras
+
+MODEL_URL = "https://drive.google.com/uc?export=download&id=1XcbglG7v9XvPcwRz8wxLFSZ-Lo5K-qu5"
+MODEL_PATH = "model.keras"
+
+if not os.path.exists(MODEL_PATH):
+    gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
 import streamlit as st
 import tensorflow as tf
 import numpy as np
@@ -52,4 +63,5 @@ elif(app_mode=="DISEASE RECOGNITION"):
                     'Tomato___Septoria_leaf_spot', 'Tomato___Spider_mites Two-spotted_spider_mite', 
                     'Tomato___Target_Spot', 'Tomato___Tomato_Yellow_Leaf_Curl_Virus', 'Tomato___Tomato_mosaic_virus',
                       'Tomato___healthy']
+
         st.success("Model is Predicting it's a {}".format(class_name[result_index]))
